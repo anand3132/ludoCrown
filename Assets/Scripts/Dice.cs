@@ -7,10 +7,10 @@ public class Dice : MonoBehaviour {
     private int diceThrowNum;
     public List<Sprite> DiceSprites;
     public Transform currentTokenParent;
-
+    public const int DiceMaxValue = 6;
 
     public void DiceThrown() {
-        diceThrowNum =  Random.Range(1, 7);
+        diceThrowNum = 6;// Random.Range(1, 7);
         GetComponent<Animator>().enabled = true;
         GameController.GetInstance().currentDiceValue = diceThrowNum;
     }

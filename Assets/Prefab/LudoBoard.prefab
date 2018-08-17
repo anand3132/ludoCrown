@@ -2053,7 +2053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1909640099395988
 GameObject:
   m_ObjectHideFlags: 1
@@ -2479,7 +2479,7 @@ Transform:
   m_GameObject: {fileID: 1437570070925528}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 4109998282918892}
   m_RootOrder: 0
@@ -3098,7 +3098,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901667287169840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -418.5, y: -646, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4151524356444778}
@@ -4269,8 +4269,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114230698806380152}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114026064614472320
@@ -4289,8 +4288,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114462048376863416}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114071389522990326
@@ -4309,8 +4307,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114071389522990326}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114074795464810508
@@ -4329,8 +4326,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114427369113579784}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114098230830154908
@@ -4349,8 +4345,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114158012194282620}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114125624665414106
@@ -4369,8 +4364,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 1
   Next: {fileID: 114829048803212990}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114127485997267608
@@ -4389,8 +4383,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114946120122409648}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114141993100719320
@@ -4409,8 +4402,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114002547226670138}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114154824975709818
@@ -4429,8 +4421,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114243068334982734}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114158012194282620
@@ -4449,8 +4440,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114217582085775986}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114160405784756052
@@ -4469,8 +4459,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114859574149199844}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114169539952692790
@@ -4489,8 +4478,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114645825435803888}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114197346043350746
@@ -4509,8 +4497,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114730693834611270}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114204642439110120
@@ -4529,8 +4516,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114841226814661586}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114214467338584878
@@ -4549,8 +4535,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114197346043350746}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114217582085775986
@@ -4569,8 +4554,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114752001869852166}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114230698806380152
@@ -4589,8 +4573,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114939193157348848}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114243068334982734
@@ -4609,8 +4592,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114074795464810508}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114247001669437014
@@ -4624,9 +4606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ab8b491ecd874408442088706687b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTokenType: 2
-  TokenActiveState: 0
-  currentCell: {fileID: 0}
+  tokenCurrentType: 2
+  tokenActiveState: 0
+  tokenCurrentCell: {fileID: 0}
 --- !u!114 &114253999617802292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4643,8 +4625,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114918503724153628}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114257640625435296
@@ -4663,8 +4644,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114904825620466400}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114261507948979594
@@ -4683,8 +4663,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114751832150013570}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114270729605152056
@@ -4703,8 +4682,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114335319216272216}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114294278194033158
@@ -4718,9 +4696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ab8b491ecd874408442088706687b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTokenType: 2
-  TokenActiveState: 0
-  currentCell: {fileID: 0}
+  tokenCurrentType: 2
+  tokenActiveState: 0
+  tokenCurrentCell: {fileID: 0}
 --- !u!114 &114324304756741578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4737,8 +4715,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114399854633643096}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114330522502047206
@@ -4757,8 +4734,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114897214127866236}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114335319216272216
@@ -4777,8 +4753,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114408260868863108}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114342157010912558
@@ -4792,9 +4767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ab8b491ecd874408442088706687b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTokenType: 2
-  TokenActiveState: 0
-  currentCell: {fileID: 0}
+  tokenCurrentType: 2
+  tokenActiveState: 0
+  tokenCurrentCell: {fileID: 0}
 --- !u!114 &114399854633643096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4811,8 +4786,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114958121411912568}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114408260868863108
@@ -4831,8 +4805,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114141993100719320}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114427369113579784
@@ -4851,8 +4824,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114735432219095688}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114438300310124416
@@ -4871,8 +4843,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114768946428117560}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114446862607207960
@@ -4891,8 +4862,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114324304756741578}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114450068847131904
@@ -4911,8 +4881,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114330522502047206}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114454489780287468
@@ -4931,8 +4900,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114898510055281920}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114462048376863416
@@ -4951,8 +4919,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114127485997267608}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114465139640234468
@@ -4971,8 +4938,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114501758845486542}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114468051316841164
@@ -4991,8 +4957,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114714957475150536}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114480257447064270
@@ -5011,8 +4976,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114761308989847402}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114488408873962742
@@ -5031,8 +4995,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114492088747846122
@@ -5046,8 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240faac6cc50828458e57324af95b219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GenTokenNo: 0
-  currentPlayer: 0
+  currentPlayer: 2
   currentDiceValue: 0
   diceThrown: 0
 --- !u!114 &114499148474222398
@@ -5066,8 +5028,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114501758845486542
@@ -5086,8 +5047,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114450068847131904}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114516315801650252
@@ -5106,8 +5066,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114125624665414106}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114543739842085362
@@ -5145,8 +5104,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114573504476781440
@@ -5165,8 +5123,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114564127398198234}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114597397321304096
@@ -5185,8 +5142,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114214467338584878}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114598230836862642
@@ -5205,8 +5161,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114098230830154908}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114619522422160802
@@ -5225,8 +5180,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114954955975485278}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114639398929066722
@@ -5240,9 +5194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ab8b491ecd874408442088706687b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTokenType: 2
-  TokenActiveState: 0
-  currentCell: {fileID: 0}
+  tokenCurrentType: 2
+  tokenActiveState: 0
+  tokenCurrentCell: {fileID: 0}
 --- !u!114 &114645825435803888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5259,8 +5213,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114816714643400236}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114656818624114928
@@ -5279,8 +5232,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114737949157190678}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114713631381552996
@@ -5299,8 +5251,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114154824975709818}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114714957475150536
@@ -5319,8 +5270,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114438300310124416}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114730693834611270
@@ -5339,8 +5289,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114454489780287468}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114735432219095688
@@ -5359,8 +5308,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114468051316841164}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114737949157190678
@@ -5379,8 +5327,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114480257447064270}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114751832150013570
@@ -5399,8 +5346,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114772786797182002}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114752001869852166
@@ -5419,8 +5365,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114759644020014260
@@ -5438,6 +5383,7 @@ MonoBehaviour:
   TokenParents_GREEN: {fileID: 4817832789757178}
   TokenParents_BLUE: {fileID: 4540297792054726}
   TokenParents_YELLOW: {fileID: 4543960500957178}
+  DiceValueUsed: 1
 --- !u!114 &114761308989847402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5454,8 +5400,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114573504476781440}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114761336057127260
@@ -5474,8 +5419,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114598230836862642}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114768946428117560
@@ -5494,8 +5438,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114257640625435296}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114772786797182002
@@ -5514,8 +5457,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114798821355414428
@@ -5534,8 +5476,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114204642439110120}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114816714643400236
@@ -5554,8 +5495,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114891715941296404}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114829048803212990
@@ -5574,8 +5514,7 @@ MonoBehaviour:
   JumpPower: 1
   StarPower: 0
   Next: {fileID: 114956269357364110}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114841226814661586
@@ -5594,8 +5533,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114253999617802292}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114859574149199844
@@ -5614,8 +5552,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114270729605152056}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114869396710119084
@@ -5634,8 +5571,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114954793619682576}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114891715941296404
@@ -5654,8 +5590,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114897214127866236
@@ -5674,8 +5609,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114597397321304096}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114898510055281920
@@ -5694,8 +5628,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114869396710119084}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114904825620466400
@@ -5714,8 +5647,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114488408873962742}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 2
   currentCellType: 1
 --- !u!114 &114918503724153628
@@ -5734,8 +5666,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114499148474222398}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114928904665628286
@@ -5754,8 +5685,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114071389522990326}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114939193157348848
@@ -5774,8 +5704,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114169539952692790}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114946120122409648
@@ -5794,8 +5723,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114928904665628286}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 1
   currentCellType: 3
 --- !u!114 &114954793619682576
@@ -5814,8 +5742,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 0}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 0
   currentCellType: 2
 --- !u!114 &114954955975485278
@@ -5834,8 +5761,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114516315801650252}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114956269357364110
@@ -5854,8 +5780,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114446862607207960}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!114 &114958121411912568
@@ -5874,8 +5799,7 @@ MonoBehaviour:
   JumpPower: 0
   StarPower: 0
   Next: {fileID: 114261507948979594}
-  hasToken: 0
-  Celltoken: []
+  CelltokenList: []
   nextCellType: 3
   currentCellType: 0
 --- !u!212 &212007460963936288

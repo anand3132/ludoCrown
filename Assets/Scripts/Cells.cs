@@ -2,45 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cells : MonoBehaviour
-{
+//Cell properties
+public class Cells : MonoBehaviour {
+
     public int CellID;
     public bool Globe;
     public bool JumpPower;
     public bool StarPower;
+
     public Cells Next;
+    public List<Token> CelltokenList;
 
-    public bool hasToken;
-
-    public List<Token> Celltoken;
-
-    [Space]
     public TokenController.TokenType nextCellType;
+    [Space]
     public TokenController.TokenType currentCellType;
 
-
-
-    // Use this for initialization
-    void Start()
-    {
+    void Start() {
         CellID = GetComponent<Transform>().GetSiblingIndex();
-        hasToken = false;
-        Celltoken = new List<Token>();
-
-    }
-
-    public Cells GetNextCell(TokenController.TokenType _Token)
-    {
-        if (_Token == TokenController.TokenType.RED)
-        {
-          //  return nextCell;
-        }
-        
-        return null;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
+        CelltokenList = new List<Token>();
     }
 }

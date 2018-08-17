@@ -2,109 +2,124 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class contain token properties 
 public class Token : MonoBehaviour {
+
     //set from the editor
-    public TokenController.TokenType currentTokenType;
-    float speed = 10f;
-    public bool TokenActiveState;
-    public Cells currentCell;
-    private bool TokedMoved;
-    int trigger = 0;
-    // Use this for initialization
+    public TokenController.TokenType tokenCurrentType;
+    public bool tokenActiveState;
+    private bool tokedMoved;
+
+    public Cells tokenCurrentCell;
+    private float tokenMoveSpeed = 10f;
+    private int diceCounter = 0;
+    private float jumpCoolingTime = 0.0f;
+    private Vector2 tokenInitialSize;
+    private bool tokenStacked;
+
     void Start () {
 
-        TokedMoved = false;
-        currentCell = null;
-        TokenActiveState = false;
+        tokedMoved = false;
+        tokenCurrentCell = null;
+        tokenActiveState = false;
+        tokenStacked = false;
+        tokenInitialSize = GetComponent<SpriteRenderer>().size;
         GetComponent<Animator>().enabled = true;
 	}
 	
     public void SetTokenState(bool _status) {
-        TokenActiveState = _status;
+        tokenActiveState = _status;
     }
 
-    public bool isTokenActive()
-    {
-        return TokenActiveState;
+    public bool isTokenActive() {
+        return tokenActiveState;
     }
 
-    float jumpCoolingTime = 0.0f;
     private void Update()
     {
         if ( !isTokenActive())
             return;
 
-        if (currentCell == null)
-        {
-            currentCell = CellController.GetInstance().GetNextCell(currentTokenType, currentCell);
-            TokedMoved = true;
-            trigger = 0;
+        if (tokenCurrentCell == null) {
+            tokenCurrentCell = CellController.GetInstance().GetNextCell(tokenCurrentType, tokenCurrentCell);
+            tokedMoved = true;
+            diceCounter = 0;
             jumpCoolingTime = 0.0f;
-            Debug.Log("Jumped");
-            Debug.Log("Token Reached");
             TokenController.GetInstance().DiceValueUsed = true;
-
+            tokenCurrentCell.CelltokenList.Add(this);
+ 
+            UIController.GetInstance().Arrow.SetActive(true);
+            UIController.GetInstance().Arrow.GetComponent<Animator>().Play("Arrow");
+            StackToken();
         }
 
-        var diffVec = gameObject.transform.position - currentCell.gameObject.transform.position;
-        if (currentCell != null)
-        {
+        var diffVec = gameObject.transform.position - tokenCurrentCell.gameObject.transform.position;
+        if (tokenCurrentCell != null) {
             jumpCoolingTime -= Time.deltaTime;
-            if (diffVec.magnitude > 0.2f)
-            {
-                if (jumpCoolingTime <= 0.0f)
-                {
-                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, currentCell.transform.position, Time.deltaTime * speed);
+            if (diffVec.magnitude > 0.2f) {
+                if (jumpCoolingTime <= 0.0f) {
+                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, tokenCurrentCell.transform.position, Time.deltaTime * tokenMoveSpeed);
                 }
                 return;
-            } else
-            {
-                gameObject.transform.position = currentCell.gameObject.transform.position;
+            } else {
+                gameObject.transform.position = tokenCurrentCell.gameObject.transform.position;
             }
         }
 
-        if (!TokedMoved && trigger<GameController.GetInstance().currentDiceValue) 
-        {
-            currentCell = CellController.GetInstance().GetNextCell(currentTokenType, currentCell);
-            trigger++;
+        if (!tokedMoved && diceCounter<GameController.GetInstance().currentDiceValue) {
+            tokenCurrentCell.CelltokenList.Remove(this);
+            tokenCurrentCell = CellController.GetInstance().GetNextCell(tokenCurrentType, tokenCurrentCell);
+            tokenCurrentCell.CelltokenList.Add(this);
+            diceCounter++;
             TokenController.GetInstance().DiceValueUsed = true;
             jumpCoolingTime = 0.2f;
             Debug.Log("Jumped");
-        }
-        else if (!TokedMoved)
-        {
-            trigger = 0;
-            TokedMoved = true;
+        } else if (!tokedMoved) {
+            diceCounter = 0;
+            tokedMoved = true;
             // TokenController.GetInstance().DiceValueUsed = true;
             Debug.Log("Token Reached");
+            StackToken();
+            UIController.GetInstance().Arrow.SetActive(true);
+            UIController.GetInstance().Arrow.GetComponent<Animator>().Play("Arrow");
         }
-
-
     }
-    public Transform GetCurrentTokensParent()
-    {
-        var _ParenTransform = TokenController.GetInstance().GetCurrentTokenParent(currentTokenType);
+
+    public Transform GetCurrentTokensParent() {
+        var _ParenTransform = TokenController.GetInstance().GetCurrentTokenParent(tokenCurrentType);
         return _ParenTransform;
     }
-    public TokenController.TokenType GetCurrentTokenType()
-    {
-        return currentTokenType;
+
+    public TokenController.TokenType GetCurrentTokenType() {
+        return tokenCurrentType;
     }
 
-    public void  TokenOnClick() {
-        if(!isTokenActive() && GameController.GetInstance().currentDiceValue != 6)
-        {
+    public void TokenOnClick() {
+        if (!isTokenActive() && GameController.GetInstance().currentDiceValue != Dice.DiceMaxValue)  
             return;
-        }
-        if(TokenController.GetInstance().DiceValueUsed)
-        {
+        if (TokenController.GetInstance().DiceValueUsed) 
             return;
-        }
-
+        gameObject.GetComponent<SpriteRenderer>().size = tokenInitialSize;
+        tokenStacked = false;
         SetTokenState(true);
-        GetComponent<Animator>().enabled = false;
         TokenController.GetInstance().PlayStopTokenJumpAnimation(false);
-        TokedMoved = false;
-
+        tokedMoved = false;
     }
+    private void StackToken()
+    {
+        if(tokenCurrentCell.CelltokenList.Count > 1)
+        {
+            foreach(var item in tokenCurrentCell.CelltokenList)
+            {
+                float radius = item.GetComponent<SpriteRenderer>().bounds.extents.magnitude;
+                Debug.Log("Radius : " + radius);
+                Vector3 _stackPosition = new Vector3(0, radius, 0);
+                if(!tokenStacked) {
+                    item.GetComponent<SpriteRenderer>().size *= .75f;
+                    tokenStacked = true;
+                }
+            }
+        }
+    }
+
 }

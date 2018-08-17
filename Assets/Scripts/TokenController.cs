@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TokenController : MonoBehaviour {
-    public enum TokenType
-    {
+    public enum TokenType {
         GREEN
         , BLUE
         , RED
@@ -25,9 +24,8 @@ public class TokenController : MonoBehaviour {
 
     public static TokenController GetInstance() {
         return instance;
-
     }
-    // Use this for initialization
+
     void Start () {
 
         if (instance)
@@ -35,58 +33,57 @@ public class TokenController : MonoBehaviour {
         else
             instance = this;
 
-        GameController.GetInstance().GetCurrentPlayerTokeType();
+       // GameController.GetInstance().GetCurrentPlayerTokeType();
 	}
 	
-    public void PlayStopTokenJumpAnimation(bool _State)
-    {
+    public void PlayStopTokenJumpAnimation(bool _State)  {
         Transform _ParentTranform = GetCurrentTokenParent(GameController.GetInstance().GetCurrentPlayerTokeType());
         Transform[] _tokens = _ParentTranform.GetComponentsInChildren<Transform>();
-        foreach(var item in _tokens)
-        {
+        foreach(var item in _tokens) {
             if (item.GetComponent<Token>() 
-                && item.GetComponent<Animator>()
-                && !item.GetComponent<Token>().isTokenActive())
-            {
-                if (_State)
-                {
+                && item.GetComponent<Animator>()) {
+                if (_State && !item.GetComponent<Token>().isTokenActive())  {
                     item.GetComponent<Animator>().Play("TokenJump");
-                    //Debug.Log("Play");
-                }
-                else
-                {
+                } else  {
                     item.GetComponent<Animator>().Play("Default");
-                    //Debug.Log("Stop");
                 }
-
             }
         }
-       
     }
 
     public Transform GetCurrentTokenParent(TokenType _type) {
         Transform _ParentTranform=null ;
-        switch (_type)
-        {
-            case TokenType.RED:
-                {
+        switch (_type) {
+            case TokenType.RED: {
                     _ParentTranform = TokenParents_RED;
                 } break;
-            case TokenType.GREEN:
-                {
+            case TokenType.GREEN: {
                     _ParentTranform = TokenParents_GREEN;
                 }break;
-            case TokenType.BLUE:
-                {
+            case TokenType.BLUE: {
                     _ParentTranform = TokenParents_BLUE;
                 } break;
-            case TokenType.YELLOW:
-                {
+            case TokenType.YELLOW: {
                     _ParentTranform = TokenParents_YELLOW;
                 } break;
-            default: { Debug.LogError("Unexpected type");  }
-                break;
+            default: {
+                    Debug.LogError("Unexpected type");
+                } break;
         }
         return _ParentTranform;
+    }
+
+    //Not used need to remove//
+    public void StackToken() {
+        Transform _ParentTranform = GetCurrentTokenParent(GameController.GetInstance().GetCurrentPlayerTokeType());
+        Transform[] _tokens = _ParentTranform.GetComponentsInChildren<Transform>();
+        foreach (var item in _tokens)  {
+            if (item.GetComponent<Token>()
+                && !item.GetComponent<Token>().isTokenActive())  {
+                var _cell = item.GetComponent<Token>().tokenCurrentCell;
+                //if (_cell.hasToken) { }
+
+            }
+        }
     }
 }

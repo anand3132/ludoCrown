@@ -3,60 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class controls diffrent UI Behaviors in the game
 public class UIController : MonoBehaviour {
     public GameObject MainGameScene;
     public GameObject WelcomeScrenUI;
     public GameObject HUD;
     public GameObject Dice;
-    public Button diceButton;
     public static UIController instance;
-
+    public Animator UIAnimator;
+    public GameObject Arrow;
     private UIController() {
         //Singleton
     }
 
-    public static UIController GetInstance()
-    {
+    public static UIController GetInstance() {
         return instance;
     }
 
-    void Start () {
-        if (instance){
+    void Start() {
+
+        if (instance)  {
             Destroy(gameObject);
             Debug.LogError("Already initialised");
         } else {
             instance = this;
         }
-        ResetMenue();
+
         MainGameScene.SetActive(false);
         WelcomeScrenUI.SetActive(true);
-  
-
     }
-	
+
     public void PlayButtonOnClick() {
-        if(MainGameScene)
-        {
-            ResetMenue();
-            MainGameScene.gameObject.SetActive(true);
-            HUD.SetActive(true);
-        }
-        else
-        {
-            Debug.LogError("Main Game Scene No Found!!");
-        }
-    }
-
-    void ResetMenue()
-    {
-        WelcomeScrenUI.SetActive(false);
-        HUD.SetActive(false);
+         UIAnimator.Play("welcomeScreen");
     }
 
     public void DiceButtonOnClick() {
+        Arrow.SetActive(true);
+        Arrow.GetComponent<Animator>().Play("Default");
+        Arrow.SetActive(false);
         Dice.GetComponent<Dice>().DiceThrown();
-      //  diceButton.interactable = false;
+        //  diceButton.interactable = false;
     }
-
-
 }
